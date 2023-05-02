@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chart.js Example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css"
+
+</head>
+<body>
+  <!-- Back Link to My Portfolio -->
+ 
+
+	<p style="text-align: center;"> US car sales in 2020 - brands </p>
+   <p><a href="https://cs-guram.github.io/MyPortfolio/" class="button;">Go Back!</a><p>
+
+<div class="wrapper">
+	<div class="chart-container">
+		<canvas id="doughnut-chart"></canvas>
+	</div>
+
+
+	<div class="chart-container">
+		<canvas id="bar-chart"></canvas>
+	</div>
+</div>
+
+<script>
+var data = {
+  labels: ["Toyota", "Honda", "Lexus", "Mercedes", "BMW"],
+  datasets: [
+    {
+      label: "Number of Sales",
+      data: [2112941, 1209805, 2112941, 325915, 278732],
+      backgroundColor: [
+        "rgba(255, 99, 132, 0.5)",
+        "rgba(54, 162, 235, 0.5)",
+        "rgba(255, 206, 86, 0.5)",
+        "rgba(75, 192, 192, 0.5)",
+        "rgba(153, 102, 255, 0.5)",
+      ],
+      borderColor: [
+        "rgb(255, 99, 132)",
+        "rgb(54, 162, 235)",
+        "rgb(255, 206, 86)",
+        "rgb(75, 192, 192)",
+        "rgb(153, 102, 255)",
+      ],
+      borderWidth: 4,
+    },
+  ],
+};
+
+var options = {
+  title: {
+    display: true,
+    text: "Sales Data",
+    fontSize: 18,
+  },
+  legend: {
+    position: "right",
+  },
+  maintainAspectRatio: false,
+  responsive: true,
+ 
+};
+
+var doughnutChart = new Chart(document.getElementById("doughnut-chart"), {
+  type: "doughnut",
+  data: data,
+  options: options,
+});
+
+var barChart = new Chart(document.getElementById("bar-chart"), {
+  type: "bar",
+  data: data,
+});
+
+
+</script>
+</body>
+</html>

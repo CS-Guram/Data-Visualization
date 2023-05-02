@@ -1,0 +1,51 @@
+body {
+	 flex-direction: column;
+	 align-items: center;
+	 justify-content: center;
+	 margin: 5.5%;
+	}
+
+p{
+     margin-bottom: 1.5%;
+	 text-align: center;
+     text-transform: uppercase;
+     color: #4CAF50;
+     font-size: 20px;
+}
+
+
+#bar-chart {
+     margin-top: 2%;
+}
+
+
+/* adjust width and margin of chart containers */
+.chart-container {
+	 width: 40%;
+     display: inline-block;
+     margin: 10px;
+}
+
+
+.wrapper{
+  margin-top: 2%;
+	 display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+
+/* change layout for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  /* set flexbox layout with column direction */
+  .wrapper {
+    flex-direction: column;
+    man-width: 400px;
+  }
+
+  .chart-container {
+	 width: 100%;
+     display: inline-block;
+     margin: 10px;
+}
+}
